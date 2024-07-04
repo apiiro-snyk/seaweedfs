@@ -51,7 +51,7 @@
         <dependency>
             <groupId>com.github.chrislusf</groupId>
             <artifactId>seaweedfs-hadoop3-client</artifactId>
-            <version>1.6.2</version>
+            <version>1.7.0</version>
         </dependency>
     </dependencies>
 
@@ -72,7 +72,7 @@
                     <target>1.8</target>
                     <encoding>UTF-8</encoding>
                     <compilerArguments>
-                        <verbose />
+                        <verbose/>
                         <bootclasspath>${java.home}/lib/rt.jar</bootclasspath>
                     </compilerArguments>
                 </configuration>
