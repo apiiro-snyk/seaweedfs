@@ -9,7 +9,7 @@ RUN cd /go/src/github.com/seaweedfs/seaweedfs/weed \
   && export LDFLAGS="-X github.com/seaweedfs/seaweedfs/weed/util.COMMIT=$(git rev-parse --short HEAD)" \
   && CGO_ENABLED=0 go install -tags "$TAGS" -ldflags "-extldflags -static ${LDFLAGS}"
 
-FROM alpine AS final
+FROM alpine:3.20.3 AS final
 LABEL author="Chris Lu"
 COPY --from=builder /go/bin/weed /usr/bin/
 RUN mkdir -p /etc/seaweedfs
